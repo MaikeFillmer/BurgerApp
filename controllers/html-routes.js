@@ -9,7 +9,7 @@ var orm = require('../config/orm.js');
 module.exports = function(app){
 	
 	app.get('/', function(req,res) {
-	    orm.getAllBurgers(function(burger){
+	    orm.allBurgers(function(burger){
 	        	res.render('index', {burger});
 	    	})
     });

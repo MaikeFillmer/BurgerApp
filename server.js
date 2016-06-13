@@ -7,7 +7,6 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var methodOverride = require('method-override');
 var mysql      = require('mysql');
-var routes = require('./controllers/burgers_controller.js');
 
 
 //connection
@@ -46,13 +45,7 @@ app.listen(PORT, function() {
 //ROUTES
 
 
-app.get('/add', function(req, res){
-
-    res.sendFile(path.join(__dirname + '/views/add.html'));
-});
-
-
-// ROUTES
-app.use('/', require('./controllers/burgers_controller.js'));
+require('./controllers/api-routes.js')(app); 
+require('./controllers/html-routes.js')(app);
 
 

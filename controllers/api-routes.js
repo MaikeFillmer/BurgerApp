@@ -10,7 +10,7 @@ module.exports = function(app){
 
     app.post('/add', function(req,res) {
         if(req.body.burgerName){
-            orm.addBurger(req.body.burgerName, function(){
+            orm.addBurgers(req.body.burgerName, function(){
                 res.redirect('/');
         
             })
