@@ -45,7 +45,7 @@ app.listen(PORT, function() {
 //ROUTES
 
 
-require('./controllers/api-routes.js')(app); 
-require('./controllers/html-routes.js')(app);
+require('./controllers/burger_controllers.js')(app); 
+//require('./controllers/html-routes.js')(app);
 
 

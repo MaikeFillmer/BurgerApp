@@ -25,6 +25,11 @@ module.exports = function(app){
         })
     });
 
+    app.get('/', function(req,res) {
+        orm.allBurgers(function(burger){
+                res.render('index', {burger});
+            })
+    });
     
 }
 
