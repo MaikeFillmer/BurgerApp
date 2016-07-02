@@ -1,0 +1,29 @@
+//connection to mysql database
+
+var express = require('express');
+var bodyParser = require('body-parser');
+var app = express(); // Tells node that we are creating an "express" server
+var configs = require('./configs.js');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.text());
+app.use(bodyParser.json({type:'application/vnd.api+json'}));
+
+
+var mysql = require('mysql');
+
+var source = configs;
+
+var connection = mysql.createConnection(source.localhost);
+
+
+connection.connect(function(err) {
+    if (err) {
+        console.error('error connecting: ' + err.stack);
+        return;
+    }
+    console.log('connected as id ' + connection.threadId);
+});
+
+module.exports = connection;
