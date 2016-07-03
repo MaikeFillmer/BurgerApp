@@ -13,7 +13,7 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
 var mysql = require('mysql');
 
-var source = configs;
+//var source = configs;
 
 var connection = mysql.createConnection(process.env.JAWSDB_URL);
 
