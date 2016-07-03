@@ -3,7 +3,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express(); // Tells node that we are creating an "express" server
-var configs = require('./configs.js');
+//var configs = require('./configs.js');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
