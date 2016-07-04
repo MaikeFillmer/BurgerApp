@@ -19,4 +19,4 @@ MySQL, Javascript, NodeJS, JQuery, Express, Handlebars
 2. You can eat the burgers that are on the menu
 3. Eaten burgers will appear on the right hand side
 
-![example](public/assets/example.png)
+![example](public/assets/example.gif)
